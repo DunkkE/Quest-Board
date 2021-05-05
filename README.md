@@ -11,6 +11,7 @@ Current Features:
 - Generate items
 - Favorite any generated content
 - Robust custom themes entered via JSON
+
 To Be Implemented:
 - Ability to generate from 'structure' categories without being in that category's generator
 - Quest generator
@@ -18,6 +19,7 @@ To Be Implemented:
 - User upload/download of custom themes
 - Create the themes in-app
 - User can filter certain given categories in the app
+
 Possible Implementation Later:
 - Grammar detection system (improved grammar for things like plurals)
 
