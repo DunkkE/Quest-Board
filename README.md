@@ -2,7 +2,10 @@
  
 This is Quest Board. An app designed to let users generate a large variety of random content using custom themes. The app is intended for web, iOS, and Android.
 
-Currently, the only way to make use of or test the app is to clone the repo. Once you have done so, navigate to the main directory for the repo and open a command prompt/terminal window. Execute the command ionic serve (optionally, ionic serve -l), and the app should open on your web browser.
+How to run:
+- Navigate to repo main directory
+- console/cmd/terminal: npm install
+- ionic serve
 
 Current Features:
 - Generate characters
