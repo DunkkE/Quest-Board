@@ -1,0 +1,18 @@
+.listItem {
+    font-size:small;
+    color:darkslategray;
+    width:240px;
+    word-wrap:break-word;
+    white-space:initial;
+}
+
+.toast {
+    font-size:small;
+    color: darkslategray;
+    --border-color: darkslategray; 
+}
+.toastHeader {
+    font-size:large;
+    color: black;
+    
+}

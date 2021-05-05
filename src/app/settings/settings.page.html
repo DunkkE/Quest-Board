@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Settings</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<h1 style="text-align:center">Have a JSON? Copy the text here!</h1>
+<ion-textarea id="textInput" autoGrow="true" class="json" placeholder="Insert a properly formatted JSON text string here!"></ion-textarea>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="text-align:center">
+    <ion-button id="favoritebutton" (click)="submit()">Submit</ion-button>
+  </ion-toolbar>
+</ion-footer>

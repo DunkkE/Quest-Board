@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Location</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+    <ion-list inset="true">
+      <ion-item>
+        <h1 class="title" >{{location.name}}</h1>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h2>Description</h2>
+          <p class="listItem">{{location.description}}</p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h2>Quirk</h2>
+          <p class="listItem">{{location.quirks}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+   
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar style="text-align:center">
+    <ion-button id="favoritebutton" (click)="addToFavorites()">Add To Favorites</ion-button>
+  </ion-toolbar>
+</ion-footer>

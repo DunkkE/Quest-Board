@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Favorites</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3" style="text-align:center">
+            <ion-button (click)="load('character')"fill="clear"><ion-icon id = "charbutt" color="dark" name="people" size="large"></ion-icon></ion-button>
+          </ion-col>
+          <ion-col size="3" style="text-align:center">
+            <ion-button (click)="load('creature')" fill="clear"><ion-icon id="creatbutt" color="dark" name="paw" size="large"></ion-icon></ion-button>
+          </ion-col>
+          <ion-col size="3" style="text-align:center">
+            <ion-button (click)="load('location')" fill="clear"><ion-icon id = "locbutt" color="dark" size="large" name="earth"></ion-icon></ion-button>
+          </ion-col>
+          <ion-col size="3" style="text-align:center">
+            <ion-button (click)="load('item')" fill="clear"><ion-icon id = "itembutt" color="dark" size="large" name="diamond"></ion-icon></ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  
+</ion-header>
+<ion-content fullscreen="true">
+  <ion-list inset="true">
+    
+    <ion-item-sliding *ngFor="let favorite of (favorites)"  color="primary">
+      <ion-item button (click)="nav(favorite)">
+        <ion-label >
+          <h2>{{favorite.name}}</h2>
+          <p class=listItem>{{favorite.description}}</p>
+        
+        </ion-label>
+      </ion-item>
+  
+      <ion-item-options side="start" color="light">
+        <ion-item-option color="light" button (click)="remove(favorite)">
+          <ion-icon slot="icon-only" color="danger" name="heart"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+
+</ion-content>

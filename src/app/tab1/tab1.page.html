@@ -1,0 +1,48 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title>
+      Characters
+    </ion-title>
+    <ion-item detail="false" lines="none" slot="start" button (click)="viewSettings()">
+      <ion-icon size="large"  name="settings">
+      </ion-icon>
+    </ion-item>
+    <ion-item detail="false" lines="none" slot="end" button (click)="viewFavs()">
+      <ion-icon size="large" name="heart">
+      </ion-icon>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullMax=10 forceOverscroll="true" >
+    <ion-refresher-content>
+      
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list inset="true">
+    <ion-item-sliding *ngFor="let character of (characters)"  color="primary">
+      <ion-item button (click)="nav(character)">
+        <ion-label >
+          <h2>{{character.name}}</h2>
+          <p class=listItem>{{character.description}}</p>
+          <p></p>
+        </ion-label>
+      </ion-item>
+   <ion-item-options side="start">
+        <ion-item-option button (click)="favorite(character)" color="light">
+          <ion-icon slot="icon-only" color="tertiary" name="heart"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+  
+      <ion-item-options side="end">
+        <ion-item-option color="warning">
+          <ion-button color="warning" (click)="trashCharacter(character)">
+            <ion-icon slot="icon-only" name="reload" ></ion-icon>
+          </ion-button>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
