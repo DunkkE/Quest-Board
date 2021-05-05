@@ -25,7 +25,7 @@ Possible Implementation Later:
 
 For custom themes, please see the below format for the strictly "required" information, and look in /Lists/adventure-default for an example.
 
-
+```
 {
     "name": string,
     "author": string,
@@ -49,8 +49,7 @@ For custom themes, please see the below format for the strictly "required" infor
         "description": string[],
          "quirk": string[],
          "goal": string[],
-         "filterable": string[]
-        
+         "filterable": string[] 
     },
     "creature":{
         "type": string[],
@@ -96,7 +95,7 @@ For custom themes, please see the below format for the strictly "required" infor
         -- removed due to generation issues, will be reimplemented --
     }
 }
-
+```
 Important syntax notes:
 
 - (), [], %XX% (X being a digit) must all be escaped using \ if they are intended to show up normally.
